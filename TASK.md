@@ -13,20 +13,14 @@ Implement a character search application using the Rick and Morty GraphQL API:
 
 ## Requirements
 
-### 1. GraphQL Query
-Create a query to fetch a character by ID with all relevant fields.
+### 1. Search Hook
+Create a `useSearch` hook for managing search state using TanStack Query. The GraphQL client is already provided in `app/lib/client.ts` with `search()` and `getCharacter()` methods.
 
-### 2. GraphQL Client
-Implement the client methods using `graphql-request`.
+### 2. Search Page
+Client-side search page with a form. Display character cards linking to detail pages.
 
-### 3. Search Hook
-Create a `useSearch()` hook for managing search state and calling the client usng tanstack.
-
-### 4. Search Page
-Client-side search page with a form. Display character cards linking to detail pages using .
-
-### 5. Character Detail Page
-Server-side rendered route that displays character information with dynamic meta tags using tanstack
+### 3. Character Detail Page
+Server-side rendered route that displays character information with dynamic meta tags using TanStack Router
 
 ## Testing
 
@@ -42,6 +36,7 @@ Verify:
 ## Notes
 
 - Use generated TypeScript types
+- GraphQL client is already implemented in `app/lib/client.ts`
 - Search page should be client-side only
 - Character detail page should be server-side rendered
 - Handle errors appropriately (404s, API failures)

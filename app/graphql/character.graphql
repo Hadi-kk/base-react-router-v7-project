@@ -1,6 +1,30 @@
-# TODO: Create a GraphQL query to fetch a single character by ID
-# Include all relevant fields: id, name, status, species, type, gender,
-# origin (id, name, type, dimension), location (id, name, type, dimension),
-# image, episode list (id, name, episode, air_date), and created date
-#
-# After creating this query, run: npm run codegen
+query GetCharacter($id: ID!) {
+  character(id: $id) {
+    id
+    name
+    status
+    species
+    type
+    gender
+    origin {
+      id
+      name
+      type
+      dimension
+    }
+    location {
+      id
+      name
+      type
+      dimension
+    }
+    image
+    episode {
+      id
+      name
+      episode
+      air_date
+    }
+    created
+  }
+}
